@@ -12,6 +12,143 @@
     --page-text: #182019;
 }
 
+header {
+    background: var(--surface);
+    color: var(--text);
+    padding: 1rem 1.25rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+header h1 {
+    font-size: 1.45rem;
+    margin-bottom: 0.75rem;
+}
+
+nav {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+    color: var(--text);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.52rem 0.95rem;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.1rem 2rem;
+    }
+    header h1 {
+        margin-bottom: 0;
+        font-size: 1.75rem;
+    }
+    nav {
+        gap: 0.85rem;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 1.35rem;
+    }
+    nav {
+        justify-content: center;
+    }
+    nav a {
+        flex: 1 1 auto;
+        text-align: center;
+        min-width: 20%;
+    }
+}
+
+.site-footer {
+    margin: 2rem 1rem 1rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 2rem;
+    color: #0b2d5b;
+    background: linear-gradient(135deg, rgba(45, 123, 255, 0.1), transparent 30%), #ffffff;
+    border: 1px solid #dce6ff;
+    border-radius: 1.5rem;
+}
+
+.footer-label {
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+    color: #2d7bff;
+}
+
+.footer-brand h2 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    line-height: 1;
+    color: #0b2d5b;
+}
+
+.footer-brand p {
+    margin: 0;
+    max-width: 24rem;
+    line-height: 1.7;
+    color: #244a8a;
+}
+
+.footer-links,
+.footer-contact,
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.footer-links a,
+.footer-contact a,
+.footer-socials a {
+    color: #244a8a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover,
+.footer-socials a:hover {
+    color: #2d7bff;
+}
+
+/* Responsive footer */
+@media (max-width: 767px) {
+    .site-footer {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    .footer-brand h2 {
+        font-size: 2rem;
+    }
+}
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -23,6 +160,31 @@ body {
         linear-gradient(180deg, #fbf7f1 0%, var(--bg) 100%);
     color: var(--page-text);
 }
+
+.page-content {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    padding: 4rem 1.5rem 2rem;
+}
+
+.hero {
+    max-width: 42rem;
+    text-align: center;
+}
+
+.hero-kicker {
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: #8a6c32;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 7vw, 4.75rem);
+    line-height: 0.95;
 
 .page-content {
     flex: 1;
