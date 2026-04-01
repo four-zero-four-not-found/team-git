@@ -12,13 +12,6 @@
   --page-text: #182019;
 }
 
-header {
-  background: var(--surface);
-  color: var(--text);
-  padding: 1rem 1.25rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-}
-
 header h1 {
   font-size: 1.45rem;
   margin-bottom: 0.75rem;
